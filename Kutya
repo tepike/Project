@@ -11,7 +11,7 @@ public class Kutya {
         this.suly = suly;
     }
 
-    // Getterek és setterek
+
 
     public String getNev() {
         return nev;
