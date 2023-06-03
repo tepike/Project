@@ -1,0 +1,56 @@
+public class dolgozok {
+    private String Név;
+    private int Életkor;
+    private int Fizetés;
+    private int ÉvesFizetés;
+
+    public String getNév(){
+        return Név;
+    }
+    public int getÉletkor(){
+        return Életkor;
+    }
+    public int getFizetés(){
+        return Fizetés;
+    }
+    public void setÉletkor(int test){
+        Életkor= test;
+    }
+
+    public void setFizetés(int Mennyit){
+        Fizetés=Fizetés+Mennyit;
+    }
+    public dolgozok(String Név, int Életkor, int Fizetés) {
+        this.Név = Név;
+        this.Életkor = Életkor;
+        if(Életkor>=120)
+            setÉletkor(25);
+        this.Fizetés = Fizetés;
+
+    }
+    public int getÉvesFizetés(){
+        ÉvesFizetés=(Fizetés*12);
+        System.out.println(Név+" éves bére = "+ÉvesFizetés+" Ft");
+        return ÉvesFizetés;
+
+    }
+
+    public void kiir(){
+        System.out.println(Név+" "+Életkor+" éves dolgozó fizetése = "+Fizetés);
+    }
+
+//            String valami = bevitel.next();
+
+public static void main(String[] args) {
+    System.out.println("Indul");
+    dolgozok ádámDolgozok= new dolgozok("Kiss Ádám", 119, 200000);
+    ádámDolgozok.kiir();
+    ádámDolgozok.getÉvesFizetés();
+    
+    
+}
+}
+/*
+ * Hozzátok létre a dolgozok osztályt (név, kor, fizetés tulajdonságokkal és éves fizetés kiírás metódussal)! 
+ * Amennyiben a kor 120-nál nagyobb értékű, úgy alapban 25-öt tároljatok el helyette a konstruktor segítségével! írjátok ki, hogy XY Z korú dolgozó éves bére: T Ft.
+ */
