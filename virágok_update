@@ -54,6 +54,9 @@ public class virágok_update {
     public double növekedés(double Eltelthónapok){
         alap_magasság=(alap_magasság+(Eltelthónapok*7));
         this.Eltelthónapok=Eltelthónapok;
+        if(alap_magasság>40){
+            alap_magasság=40;
+        }
         return alap_magasság;
     }
 
@@ -75,7 +78,7 @@ public class virágok_update {
     public static void main(String[] args) {
         virágok_update TulupánVirágok= new virágok_update("Tulipán", 3, 40, 4000);
         TulupánVirágok.kiir();
-        TulupánVirágok.növekedés(2.5);
+        TulupánVirágok.növekedés(20.5);
         TulupánVirágok.kiir_növekedés();
 
 
