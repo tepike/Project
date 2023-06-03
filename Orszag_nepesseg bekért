@@ -51,7 +51,7 @@ class Main {
         AziaiOrszag aziaiOrszag = new AziaiOrszag();
         aziaiOrszag.nev = "Kína";
         aziaiOrszag.fovaros = "Peking";
-        aziaiOrszag.nepesseg = 9875641;
+        aziaiOrszag.nepesseg = -142134;
         aziaiOrszag.nevezetessegek = "Kínai nagy fal";
         aziaiOrszag.getNépesség();
 
