@@ -1,0 +1,77 @@
+public class Tanulo {
+    private String nev;
+    private int kor;
+    private int diakigszám;
+    private int pontszám;
+
+    public Tanulo(String nev, int kor, int diakigszám, int pontszám) {
+        this.nev = nev;
+        this.kor = kor;
+        this.diakigszám = diakigszám;
+        this.pontszám = pontszám;
+    }
+
+   
+
+    public String getNev() {
+        return nev;
+    }
+
+    public void setNev(String nev) {
+        this.nev = nev;
+    }
+
+    public int getEletkor() {
+        return kor;
+    }
+
+    public void setEletkor(int kor) {
+        this.kor = kor;
+    }
+
+    public int getDiakigszám() {
+        return diakigszám;
+    }
+
+    public void setDiakigszám(int diakigszám) {
+        this.diakigszám = diakigszám;
+    }
+
+    public int getPontszám() {
+        return pontszám;
+    }
+
+    public void setPontszám(int pontszám) {
+        this.pontszám = pontszám;
+    }
+    public void versenypontszam(int pontszámadás) {
+        pontszám=pontszám+pontszámadás;
+        this.pontszám = pontszám;
+    }
+    public void kiir(){
+        System.out.println("Név= "+nev+" Kor= "+kor+" Diákigazolvány száma= "+diakigszám+" pontszám= "+pontszám);
+    }
+
+/*
+ Készítsetek tanulo osztályt (név, kor, diakigszám, pontszám) tulajdonságokkal! Vegyetek fel öt tanulót! A pontszám egy verseny eddigi eredményének a pontszámát tárolja. Tudjuk megadni és lekérdezni ezeket a tulajdonságokat,
+de csakis set és get segítségével!
+Legyen olyan metódusunk, ahol a tanuló pontot szerezhet és növelheti eddigi pontszámát
+ */
+    public static void main(String[] args) {
+        Tanulo ElsoTanulo= new Tanulo("Kovács Zoltán", 11, 784601, 0);
+        Tanulo MasodikTanulo= new Tanulo("Kovács Péter", 12, 784602, 0);
+        Tanulo HarmadikTanulo= new Tanulo("Kovács Klára", 13, 784603, 0);
+        Tanulo NegyedikTanulo= new Tanulo("Kovács Imre", 14, 784604, 0);
+        Tanulo OtodikTanulo= new Tanulo("Kovács Tamás", 15, 784605, 0);
+        ElsoTanulo.kiir();
+        ElsoTanulo.versenypontszam(14);
+        ElsoTanulo.kiir();
+        ElsoTanulo.versenypontszam(14);
+        ElsoTanulo.kiir();
+
+
+
+
+
+    }
+}
