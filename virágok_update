@@ -57,6 +57,9 @@ public class virágok_update {
         if(alap_magasság>40){
             alap_magasság=40;
         }
+        if(Eltelthónapok>6){
+            alap_magasság=0;
+        }
         return alap_magasság;
     }
 
@@ -78,7 +81,7 @@ public class virágok_update {
     public static void main(String[] args) {
         virágok_update TulupánVirágok= new virágok_update("Tulipán", 3, 40, 4000);
         TulupánVirágok.kiir();
-        TulupánVirágok.növekedés(20.5);
+        TulupánVirágok.növekedés(4);
         TulupánVirágok.kiir_növekedés();
 
 
