@@ -1,0 +1,83 @@
+import java.util.Scanner;
+public class pont {
+
+    int x2;//x határa
+    int y2;//y határa
+
+    
+
+public static void main(String[] args) {
+    int x=0;
+    int y=0;
+    Scanner bevitel= new Scanner(System.in);
+
+    System.out.println("X tengely: ");
+    int x2= bevitel.nextInt();
+        if(x2<0){
+            x2=1;
+        }
+
+    System.out.println("Y tengely: ");
+    int y2= bevitel.nextInt();
+        if(y2<0){
+            y2=1;
+        }
+        System.out.println("Pálya mérete= "+x2+" x "+y2+ "| Jelnelegi pozíció "+"X= "+x+" Y="+y);
+
+        do{
+            System.out.println("\nKérem adja meg az irányt (j, l, i, k) vagy E = Befejezése");
+            String Opcionális_gomb = bevitel.next().toUpperCase();
+            String Lépések="IJKLME";
+            if(Opcionális_gomb.contains("E")){
+                System.out.println("Bezárás");
+                break;
+            }
+
+            while (!Lépések.contains(Opcionális_gomb)) {
+                System.out.println("Helytelen lépés. | Kérem adja meg az irányt (j, l, i, k) vagy E = Befejezése");
+                Opcionális_gomb = bevitel.next().toUpperCase();
+            }
+
+            switch(Opcionális_gomb){
+                case "I":
+                    x++;
+                    if (x > x2) x = 0;
+
+                    break;
+                case "K":
+                    x--;
+                    if (x <0) x = x2;
+
+                    break;
+                case "J":
+                    y--;
+                    if (y < 0) y = y2;
+
+                    break;
+                case "L":
+                    y++;
+                    if (y > y2) y = 0;
+
+                    break;
+
+                case "E":
+                    break;
+                case "M":
+                    System.out.println("\nJelnelegi pozíció "+"X= "+x+" Y="+y);
+
+                    break;
+
+
+
+
+                default:
+                    System.out.print("Érvénytelen irány");
+
+
+            }
+            System.out.println("\n\t\t\tX= "+x+" Y="+y);
+
+
+        }while (true);
+    }
+}
