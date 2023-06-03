@@ -1,0 +1,54 @@
+public class virágok {
+    private String név;
+    private int öntözésgyakoriság;
+    private int maxmagasság;
+    private int ár;
+
+    public virágok(String név, int öntözésgyakoriság, int maxmagasság, int ár) {
+        this.név = név;
+        this.öntözésgyakoriság = öntözésgyakoriság;
+        this.maxmagasság = maxmagasság;
+        this.ár = ár;
+    }
+
+    public String getNév() {
+        return név;
+    }
+
+    public void setNév(String név) {
+        this.név = név;
+    }
+
+    public int getÖntözésgyakoriság() {
+        return öntözésgyakoriság;
+    }
+
+    public void setÖntözésgyakoriság(int öntözésgyakoriság) {
+        this.öntözésgyakoriság = öntözésgyakoriság;
+    }
+
+    public int getMaxmagasság() {
+        return maxmagasság;
+    }
+
+    public void setMaxmagasság(int maxmagasság) {
+        this.maxmagasság = maxmagasság;
+    }
+
+    public int getÁr() {
+        return ár;
+    }
+
+    public void setÁr(int ár) {
+        this.ár = ár;
+    }
+
+    public void kiir() {
+        System.out.println("Virág típusa = " + név + ", Öntözésgyakorisága = " + öntözésgyakoriság + " naponta" + ", Maximális magassága = " + maxmagasság + " centiméter" + ", Ára = " + ár + " Forint");
+    }
+
+    public static void main(String[] args) {
+        virágok tulipánVirágok = new virágok("Tulipán", 3, 40, 4000);
+        tulipánVirágok.kiir();
+    }
+}
