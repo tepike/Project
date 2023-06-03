@@ -1,0 +1,55 @@
+public class Kutya {
+    private String nev;
+    private int eletkor;
+    private String fajta;
+    private double suly;
+
+    public Kutya(String nev, int eletkor, String fajta, double suly) {
+        this.nev = nev;
+        this.eletkor = eletkor;
+        this.fajta = fajta;
+        this.suly = suly;
+    }
+
+    // Getterek és setterek
+
+    public String getNev() {
+        return nev;
+    }
+
+    public void setNev(String nev) {
+        this.nev = nev;
+    }
+
+    public int getEletkor() {
+        return eletkor;
+    }
+
+    public void setEletkor(int eletkor) {
+        this.eletkor = eletkor;
+    }
+
+    public String getFajta() {
+        return fajta;
+    }
+
+    public void setFajta(String fajta) {
+        this.fajta = fajta;
+    }
+
+    public double getSuly() {
+        return suly;
+    }
+
+    public void setSuly(double suly) {
+        this.suly = suly;
+    }
+
+    public static void main(String[] args) {
+        Kutya kutya = new Kutya("Bodri", 3, "Labrador retriever", 25.5);
+        System.out.println("Kutya neve: " + kutya.getNev());
+        System.out.println("Kutya életkora: " + kutya.getEletkor() + " év");
+        System.out.println("Kutya fajtája: " + kutya.getFajta());
+        System.out.println("Kutya súlya: " + kutya.getSuly() + " kg");
+    }
+}
