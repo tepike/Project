@@ -1,0 +1,91 @@
+//1. Nézzétek meg a 13. diát! Az osztályunk kiegészül az osztályra jellemző metódussal. Itt egy kiírással.
+//2. Készítsetek viragok neven egy osztályt! Határozzátok meg a növények tulajdonságát (pl név, maxmagasság, öntözésgyakoriság, ár)! Készítsetek kiírás metódust is, mely meghatározza egy növény öntözési gyakoriságát. 
+
+
+public class virágok_update {
+    private String név;
+    private int öntözésgyakoriság;
+    private double maxmagasság;
+    private int ár;
+    public double alap_magasság=0;
+    public double Eltelthónapok=0;
+
+
+    public virágok_update(String név, int öntözésgyakoriság, double maxmagasság, int ár) {
+        this.név = név;
+        this.öntözésgyakoriság = öntözésgyakoriság;
+        this.maxmagasság = maxmagasság;
+        this.ár = ár;
+
+    }
+
+    public String getNév() {
+        return név;
+    }
+
+    public void setNév(String név) {
+        this.név = név;
+    }
+
+    public int getÖntözésgyakoriság() {
+        return öntözésgyakoriság;
+    }
+
+    public void setÖntözésgyakoriság(int öntözésgyakoriság) {
+        this.öntözésgyakoriság = öntözésgyakoriság;
+    }
+
+    public double getMaxmagasság() {
+        return maxmagasság;
+    }
+
+    public void setMaxmagasság(double maxmagasság) {
+        this.maxmagasság = maxmagasság;
+    }
+
+    public int getÁr() {
+        return ár;
+    }
+
+    public void setÁr(int ár) {
+        this.ár = ár;
+    }
+
+    public double növekedés(double Eltelthónapok){
+        alap_magasság=(alap_magasság+(Eltelthónapok*7));
+        this.Eltelthónapok=Eltelthónapok;
+        return alap_magasság;
+    }
+
+    public double ültetve(double Eltelthónapok){
+        Eltelthónapok=Eltelthónapok;
+        return Eltelthónapok;
+    }
+
+
+
+    public void kiir() {
+        System.out.println("Virág típusa = " + név + ", Öntözésgyakorásga = " + öntözésgyakoriság +" naponta"+ ", Maximális magassága = " + maxmagasság +" centiméter"+ ", Ára = " + ár+" Forint" );
+    }
+
+    public void kiir_növekedés() {
+        System.out.println("Virág típusa = " + név +" "+Eltelthónapok+" hónap alatt"+ ", növekedett = " + alap_magasság +" centiméter");
+    }
+
+    public static void main(String[] args) {
+        virágok_update TulupánVirágok= new virágok_update("Tulipán", 3, 40, 4000);
+        TulupánVirágok.kiir();
+        TulupánVirágok.növekedés(2.5);
+        TulupánVirágok.kiir_növekedés();
+
+
+
+
+    }
+}
+
+/*
+Tudjuk, hogy egy hónap alatt hány mm-t nő átlagosan a növény. Kérjük be a felhasználótól, hogy hány hónap telt el a vásárlás óta!
+Készítsetek metódust, mely növelni tudja a megadott növény magasságát. Egy másik metódus pedig tudja kiírni a pillanatnyi állapotot
+Pl. a Leandre 3 hónap után 40,3 cm
+ */
