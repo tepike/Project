@@ -1,0 +1,81 @@
+public class Utazás {
+    private String célország;
+    private String város;
+    private int ár;
+    private String utazás;
+    private String tól;
+    private String ig;
+
+    public Utazás(String célország, String város, int ár, String utazás, String tól, String ig) {
+        this.célország = célország;
+        this.város = város;
+        this.ár = ár;
+        this.utazás = utazás;
+        this.tól = tól;
+        this.ig = ig;
+    }
+
+    public String getCélország() {
+        return célország;
+    }
+
+    public void setCélország(String célország) {
+        this.célország = célország;
+    }
+
+    public String getVáros() {
+        return város;
+    }
+
+    public void setVáros(String város) {
+        this.város = város;
+    }
+
+    public int getÁr() {
+        return ár;
+    }
+
+    public void setÁr(int ár) {
+        this.ár = ár;
+    }
+
+    public String getUtazás() {
+        return utazás;
+    }
+
+    public void setUtazás(String utazás) {
+        this.utazás = utazás;
+    }
+
+    public String getTól() {
+        return tól;
+    }
+
+    public void setTól(String tól) {
+        this.tól = tól;
+    }
+
+    public String getIg() {
+        return ig;
+    }
+
+    public void setIg(String ig) {
+        this.ig = ig;
+    }
+
+    public void kiir() {
+        System.out.println("Célország = " + célország + ", Város = " + város + ", Ár = " + ár + ", Utazás = " + utazás + ", Mettől = " + tól + ", Eddig = " + ig);
+    }
+
+    public static void main(String[] args) {
+        Utazás PragaUtazas = new Utazás("Csehország", "Prága", 1500000, "2023-06-01", "2023-06-02", "2023-06-12");
+        Utazás LondonUtazas = new Utazás("Egyesült Királyság", "London", 2500000, "2023-07-11", "2023-07-11", "2023-07-20");
+        Utazás LuxemburgUtazas = new Utazás("Luxemburg", "Luxemburg", 980000, "2023-01-01", "2023-01-01", "2023-02-01");
+
+        PragaUtazas.kiir();
+        LondonUtazas.kiir();
+        LuxemburgUtazas.kiir();
+
+
+    }
+}
